@@ -20,7 +20,7 @@ export default function App() {
     <AppLoading />
   ) : (
     <>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
       <AppStack />
     </>
   );
