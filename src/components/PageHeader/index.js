@@ -8,7 +8,7 @@ import loogIcon from "../../assets/images/logo.png";
 
 import styles from "./styles";
 
-function PageHeader({ title }) {
+function PageHeader({ title, headerRight, children }) {
   const { navigate } = useNavigation();
   function handleGoBack() {
     navigate("Landing");
@@ -24,7 +24,12 @@ function PageHeader({ title }) {
         <Image source={loogIcon} resizeMode="contain" />
       </View>
 
-      <Text style={styles.title}>{title}</Text>
+      <View style={styles.header}>
+        <Text style={styles.title}>{title}</Text>
+        {headerRight}
+      </View>
+
+      {children}
     </View>
   );
 }
